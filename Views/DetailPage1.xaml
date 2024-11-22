@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlyoutApp.Views.DetailPage1"
+             Title="DetailPage1">
+        <ContentPage.Resources>
+                <Style TargetType="Label">
+                        <Setter x:Name="lab" Property="FontFamily" Value="VoltaireFrangela"/>
+                </Style>
+                
+        </ContentPage.Resources>
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- Label -->
+            <Label Text="Please fill out the form below:"
+                   FontSize="18"
+                   
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <!-- Entry (TextBox) -->
+            <Label Text="Name:" />
+            <Entry Placeholder="Enter your name"
+                   x:Name="NameEntry" />
+
+            <!-- Editor -->
+            <Label Text="Description:" />
+            <Editor Placeholder="Write a brief description"
+                    AutoSize="TextChanges"
+                    x:Name="DescriptionEditor" />
+
+            <!-- ComboBox (Picker) -->
+            <Label Text="Choose a category:" />
+            <Picker x:Name="CategoryPicker"
+                    Title="Select a category">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Category 1</x:String>
+                        <x:String>Category 2</x:String>
+                        <x:String>Category 3</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- Button -->
+            <Button Text="Submit"
+                    BackgroundColor="LightBlue"
+                    TextColor="Black"
+                    Clicked="OnSubmitClicked" />
+
+            <!-- Label to Display Result -->
+            <Label x:Name="ResultLabel"
+                   FontSize="16"
+                   TextColor="Green"
+                   HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+</ContentPage>
