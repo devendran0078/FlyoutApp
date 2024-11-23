@@ -42,6 +42,34 @@
                 </Picker.ItemsSource>
             </Picker>
 
+            <StackLayout Padding="20" Spacing="10">
+        <!-- Display the image -->
+        <Image Source="genetic_data"
+               HeightRequest="100"
+               WidthRequest="100"
+               Aspect="AspectFit" />
+
+        <!-- Example with captions -->
+        <Label Text="This is an image!" 
+               FontSize="18"
+               HorizontalOptions="Center" />
+    </StackLayout>
+
+    <StackLayout Padding="20" Spacing="10">
+        <!-- Display the image -->
+        <Image Source="conversation"
+               HeightRequest="100"
+               WidthRequest="100"
+               Aspect="AspectFit" />
+
+        <!-- Example with captions -->
+        <Label Text="Shopping Cart" 
+               FontSize="18"
+               HorizontalOptions="Center" />
+    </StackLayout>
+
+
+
             <!-- Button -->
             <Button Text="Submit"
                     BackgroundColor="LightBlue"
